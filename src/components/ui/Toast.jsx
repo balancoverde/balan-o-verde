@@ -1,0 +1,2 @@
+import {useEffect} from 'react';
+export default function Toast({message,onClose}){useEffect(()=>{if(!message)return;const id=setTimeout(onClose,2600);return()=>clearTimeout(id)},[message,onClose]);return message?<div style={{position:'fixed',right:18,bottom:48,zIndex:50,background:'#0f2747',color:'#fff',padding:'10px 13px',borderRadius:8,fontSize:11,boxShadow:'0 8px 25px rgba(15,39,71,.2)'}}>{message}</div>:null}
